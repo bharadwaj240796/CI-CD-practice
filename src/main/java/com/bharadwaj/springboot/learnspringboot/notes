@@ -1,0 +1,3 @@
+We have 4 different profiles : 1.Dev	2.QA	3.Stage		4.Prod.
+
+and 5 logging type : 1. Trace	2.Debug	 3.Info	 4.Warning	 5.Error
