@@ -30,7 +30,7 @@ jobs:
 
       - name: Build docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/ci-cd-practice:$(date +'%Y%m%d%H%M%S') .
+          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/ci-cd-practice:latest
         env:
           DOCKER_BUILDKIT: 1
 
@@ -42,5 +42,5 @@ jobs:
 
       - name: Push to Docker Hub
         run: |
-          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/ci-cd-practice:$(date +'%Y%m%d%H%M%S')
+          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/ci-cd-practice:latest
         
