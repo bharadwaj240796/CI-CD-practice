@@ -34,7 +34,7 @@ jobs:
           context: .
           dockerfile: Dockerfile
           push: false
-          tags: ${{secrets.DOCKER_HUB_USERNAME}}/CI-CD-practice:latest
+          tags: ${{secrets.DOCKER_HUB_USERNAME}}/ci-cd-practice:latest
 
 
       - name: Login to Docker
@@ -49,5 +49,5 @@ jobs:
           context: .
           dockerfile: Dockerfile
           push: false
-          tags: ${{secrets.DOCKER_HUB_USERNAME}}/CI-CD-practice:latest
+          tags: ${{secrets.DOCKER_HUB_USERNAME}}/ci-cd-practice:latest
         
