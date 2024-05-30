@@ -28,26 +28,3 @@ jobs:
           mvn clean
           mvn -B package --file pom.xml
 
-      - name: Build docker image
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          dockerfile: Dockerfile
-          push: false
-          tags: ${{secrets.DOCKER_HUB_USERNAME}}/ci-cd-practice:latest
-
-
-      - name: Login to Docker
-        uses: docker/login-action@v2
-        with:
-          username: ${{ secrets.DOCKER_HUB_USERNAME }}
-          password: ${{ secrets.DOCKER_HUB_KEY }}
-
-      - name: Push to Docker Hub
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          dockerfile: Dockerfile
-          push: false
-          tags: ${{secrets.DOCKER_HUB_USERNAME}}/ci-cd-practice:latest
-        
